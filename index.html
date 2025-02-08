@@ -18,6 +18,13 @@
     }
     polaris-chip {
       margin: 16px;
+      --polaris-chip-background-color: azure;
+    }
+    a {
+      margin: 16px;
+      color: red;
+      background-color: azure;
+      padding: 50px;
     }
   </style>
   <title>polaris-chip / my-card</title>
@@ -31,8 +38,41 @@
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
+  <a href="https://psu.edu/" target="_blank">PSU</a>
+
   <h1>my-card</h1>
+  
   <my-card></my-card>
+
+  <my-card
+  title="Han Solo"
+  image="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg/220px-Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg"
+  link="https://starwars.fandom.com/wiki/Han_Solo/Legends">
+  </my-card>
+  
+  <my-card
+  title="Indiana Jones"
+  image="https://goldenglobes.com/wp-content/uploads/2023/10/01-harrison-ford-in-indiana-jones-and-the-raiders-of-the-lost-ark-1981-scaled.jpg?w=2000"
+  link="https://indianajones.fandom.com/wiki/Indiana_Jones">
+  </my-card>
+
+  <my-card
+  title="Branch Rickey"
+  image="https://wehco.media.clients.ellingtoncms.com/timesfreepress/img/photos/2013/04/11/BosemanRickey.jpg"
+  link="https://www.si.com/extra-mustard/2013/04/11/harrison-ford-discusses-playing-branch-rickey-in-42">
+  </my-card>
+
+  <my-card
+  title="John Thornton"
+  image="https://www.maturetimes.co.uk/wp-content/uploads/2020/02/The-Call-of-the-Wild-2.jpg"
+  link="https://the-call-of-the-wild.fandom.com/wiki/John_Thornton_(2020_version)">
+  </my-card>
+
+  <my-card
+  title="James Marshall"
+  image="https://i0.wp.com/bamfstyle.com/wp-content/uploads/2013/02/af1-main1.jpg?resize=258%2C419"
+  link="https://hero.fandom.com/wiki/President_James_Marshall">
+  </my-card>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
