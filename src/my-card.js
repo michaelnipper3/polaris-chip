@@ -14,9 +14,10 @@ export class MyCard extends LitElement {
 
   constructor() {
     super();
-    this.title = "Rick Deckard";
-    this.image = "https://www.therpf.com/forums/attachments/12417640_945743055507970_4938982837811334232_n-jpgoh16c74547ea87a653458bf8972775256aoe57d3cc87-jpg.759686/";
-    this.link = "https://bladerunner.fandom.com/wiki/Rick_Deckard";
+    this.title = "#";
+    this.image = "#";
+    this.link = "#"; 
+    this.fancy = false;
   }
 
   static get styles() {
@@ -24,11 +25,17 @@ export class MyCard extends LitElement {
       :host {
         display: block;
       }
+
+      :host([fancy]) .card{
+        display: block;
+        background-color: blue;
+        color: white
+      }
+
       .card.toggled {
         background-color: red;
         color: blue;
       }
-
       .card {
         background-color: #4f2a06;
         width: 400px;
@@ -60,7 +67,37 @@ export class MyCard extends LitElement {
         background-color: blue;
         color: white;
       }
+      details summary {
+      text-align: center;
+      font-size: 20px;
+      padding: 8px 0;
+      font-family: "Times New Roman", Times, serif;
+      color: yellow;
+
+      }
+
+    details[open] summary {
+      font-weight: bold;
+     }
+  
+    details div {
+      border: 2px solid black;
+      text-align: center;
+      padding: 8px;
+      height: 70px;
+      overflow: auto;
+      }
     `;
+  }
+
+  openChanged(e) {
+    console.log(e.newState);
+    if (e.newState === "open") {
+      this.fancy = true;
+    }
+    else {
+      this.fancy = false;
+    }
   }
 
   render() {
@@ -69,10 +106,15 @@ export class MyCard extends LitElement {
       <div class="card">
         <h1 class="cardheader"><b>${this.title}</b></h1>
           <img src=${this.image} alt=${this.title} />
-        <p>Deckard was a Blade Runner in the Fourth Sector until the slaughter at the steel shop. Now, he just wants to put the past behind him, maybe even start over in the off-world colonies. But in this town, the past has a habit of catching up with you.</p>
-        <a href=${this.link} target="_blank">
-          <button class="btn"><em>Details</em></button>
-        </a>
+          <details ?open="${this.fancy}" @toggle="${this.openChanged}">
+            <summary>Description</summary>
+            <div>
+              <slot></slot>
+              <a href=${this.link} target="_blank">
+                <button class="btn"><em>Link for more info</em></button>
+              </a>
+            </div>
+          </details>
       </div>
     </div>`;
   }
@@ -82,6 +124,7 @@ export class MyCard extends LitElement {
       title: { type: String },
       image: { type: String },
       link: { type: String},
+      fancy: { type: Boolean, reflect: true }
     };
   }
 }

@@ -7,6 +7,7 @@
   <meta name="Description" content="Boilerplate for polaris chip">
   <base href="/">
 
+  <!-- THIS IS WHERE TO ADD STYLES FOR SLOTTED STUFF -->
   <style>
     :root,
     html,
@@ -26,6 +27,12 @@
       background-color: azure;
       padding: 50px;
     }
+    p {
+      color: yellow;
+        margin: 10px 25px 10px 25px;
+        font-family: "Times New Roman", Times, serif;
+    }
+
   </style>
   <title>polaris-chip / my-card</title>
 </head>
@@ -42,36 +49,58 @@
 
   <h1>my-card</h1>
   
-  <my-card></my-card>
+  <my-card
+    title="Rick Deckard"
+    image="https://www.therpf.com/forums/attachments/12417640_945743055507970_4938982837811334232_n-jpgoh16c74547ea87a653458bf8972775256aoe57d3cc87-jpg.759686/"
+    link="https://bladerunner.fandom.com/wiki/Rick_Deckard">
+    <p>
+      Deckard was a Blade Runner in the Fourth Sector until the slaughter at the steel shop. Now, he just wants to put the past behind him, maybe even start over in the off-world colonies. But in this town, the past has a habit of catching up with you.
+    </p>
+  </my-card>
 
   <my-card
-  title="Han Solo"
-  image="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg/220px-Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg"
-  link="https://starwars.fandom.com/wiki/Han_Solo/Legends">
+    title="Han Solo"
+    image="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg/220px-Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg"
+    link="https://starwars.fandom.com/wiki/Han_Solo/Legends">
+    <p>
+      Cold blooded murderer for shooting <em>Greedo</em>.
+    </p>
   </my-card>
   
   <my-card
-  title="Indiana Jones"
-  image="https://goldenglobes.com/wp-content/uploads/2023/10/01-harrison-ford-in-indiana-jones-and-the-raiders-of-the-lost-ark-1981-scaled.jpg?w=2000"
-  link="https://indianajones.fandom.com/wiki/Indiana_Jones">
+    title="Indiana Jones"
+    image="https://goldenglobes.com/wp-content/uploads/2023/10/01-harrison-ford-in-indiana-jones-and-the-raiders-of-the-lost-ark-1981-scaled.jpg?w=2000"
+    link="https://indianajones.fandom.com/wiki/Indiana_Jones">
+    <p>
+      Always escaped from every bad situation.
+    </p>
   </my-card>
 
   <my-card
-  title="Branch Rickey"
-  image="https://wehco.media.clients.ellingtoncms.com/timesfreepress/img/photos/2013/04/11/BosemanRickey.jpg"
-  link="https://www.si.com/extra-mustard/2013/04/11/harrison-ford-discusses-playing-branch-rickey-in-42">
+    title="Branch Rickey"
+    image="https://wehco.media.clients.ellingtoncms.com/timesfreepress/img/photos/2013/04/11/BosemanRickey.jpg"
+    link="https://www.si.com/extra-mustard/2013/04/11/harrison-ford-discusses-playing-branch-rickey-in-42">
+    <p>
+      He did not care about Jackie Robinson's skin color. He just cared about the color of the uniform.
+    </p>
   </my-card>
 
   <my-card
-  title="John Thornton"
-  image="https://www.maturetimes.co.uk/wp-content/uploads/2020/02/The-Call-of-the-Wild-2.jpg"
-  link="https://the-call-of-the-wild.fandom.com/wiki/John_Thornton_(2020_version)">
+    title="John Thornton"
+    image="https://www.maturetimes.co.uk/wp-content/uploads/2020/02/The-Call-of-the-Wild-2.jpg"
+    link="https://the-call-of-the-wild.fandom.com/wiki/John_Thornton_(2020_version)">
+    <p>
+      Thornton really loved his dog.
+    </p>
   </my-card>
 
   <my-card
-  title="James Marshall"
-  image="https://i0.wp.com/bamfstyle.com/wp-content/uploads/2013/02/af1-main1.jpg?resize=258%2C419"
-  link="https://hero.fandom.com/wiki/President_James_Marshall">
+    title="James Marshall"
+    image="https://i0.wp.com/bamfstyle.com/wp-content/uploads/2013/02/af1-main1.jpg?resize=258%2C419"
+    link="https://hero.fandom.com/wiki/President_James_Marshall">
+    <p>
+      We need a president like him in real life.
+    </p>
   </my-card>
 
   <!-- this is what is bringing in the definition for this tag -->
