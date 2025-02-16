@@ -48,7 +48,16 @@
   <a href="https://psu.edu/" target="_blank">PSU</a>
 
   <h1>my-card</h1>
-  
+
+  <button>Toggle</button>
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      const card = document.querySelector('my-card');
+      card.fancy = !card.fancy;
+    })
+  </script>
+
   <my-card
     title="Rick Deckard"
     image="https://www.therpf.com/forums/attachments/12417640_945743055507970_4938982837811334232_n-jpgoh16c74547ea87a653458bf8972775256aoe57d3cc87-jpg.759686/"
